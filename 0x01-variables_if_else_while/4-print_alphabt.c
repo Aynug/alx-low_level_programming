@@ -1,6 +1,6 @@
 /*
  * File: 4-print_alphabt.c
- * Auth: Aynalem Girma Kassaye 
+ * Auth: Aynalem Girma Kassaye
  */
 
 #include <stdio.h>
@@ -24,4 +24,3 @@ int main(void)
 
 	return (0);
 }
-
