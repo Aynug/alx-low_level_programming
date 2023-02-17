@@ -11,7 +11,7 @@
  * Return: Always 0.
  */
 int main(void)
-{i
+{
 	char letter;
 
 	for (letter = 'a'; letter <= 'z'; letter++)
@@ -20,4 +20,4 @@ int main(void)
 	putchar('\n');
 
 	return (0);
-
+}
