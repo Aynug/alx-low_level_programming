@@ -21,3 +21,19 @@ int divisors(int n, int m)
 		return (1);
 	}
 }
+/**
+ * is_prime_number- detects if an input number is a prime number
+ * @n: input number
+ * Return: 1 if n is a prime number. 0 if n is not a prime number
+ */
+int is_prime_number(int n)
+{
+	if ((!(n % 2) && n != 2) || n < 2)
+	{
+		return (0);
+	}
+	else
+	{
+		return (divisors(3, n));
+	}
+}
