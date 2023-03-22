@@ -1,15 +1,18 @@
 #include "3-calc.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
- * get_op_func - select the correct operation function asked by user
- * @s: operator argument
- * Return: function pointer corresponding to operator given
- */
+* get_op_func - Retrieves function operator for given operation
+*
+* @s: char pointer
+*
+* Return: Pointer to callback function
+*/
+
 int (*get_op_func(char *s))(int, int)
 {
+
 	op_t ops[] = {
+
 		{"+", op_add},
 		{"-", op_sub},
 		{"*", op_mul},
@@ -18,15 +21,23 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}
 	};
 
-	int i;
 
-	i = 0;
-	while (i < 5)
+	int i = 0;
+
+
+
+/* while 1< 4, s and s[0] (args) == pos. in struct.s[1] is empt =? true */
+
+	while (i <= 4)
 	{
-		if (ops[i].op[0] == s[0])
+
+		if (s && s[0] == ops[i].op[0] && !s[1])
+		{
 			return (ops[i].f);
+		}
+
 		i++;
 	}
-
 	return (NULL);
 }
+
